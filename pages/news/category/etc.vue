@@ -1,5 +1,5 @@
 <template>
   <div>
-    <h1>หมวดทั่วไป</h1>
+    <h1>หมวดทั่วไป2</h1>
   </div>
 </template>
