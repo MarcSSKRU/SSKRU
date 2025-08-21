@@ -1,4 +1,8 @@
+<script setup>
+</script>
 <template>
+  <div>
+    <template>
   <div class="min-h-screen flex flex-col bg-gradient-to-br from-yellow-50 via-white to-yellow-100">
     <!-- Header -->
     <header class="bg-white/80 backdrop-blur-md text-yellow-700 shadow-lg border-b border-yellow-200 sticky top-0 z-20">
@@ -25,9 +29,9 @@
           <path fill="#FDE68A" fill-opacity="0.3" d="M0,160L80,149.3C160,139,320,117,480,128C640,139,800,181,960,181.3C1120,181,1280,139,1360,117.3L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
         </svg>
       </div>
-      <h2 class="text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-lg">
-        สำนักพัฒนานักศึกษา มหาวิทยาลัยราชภัฏศรีสะเกษ
-      </h2>
+      <h2 class="text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-lg font-sans">
+  สำนักพัฒนานักศึกษา มหาวิทยาลัยราชภัฏศรีสะเกษ
+</h2>>
       <p class="text-xl md:text-2xl mb-8 font-medium">
         พัฒนาศักยภาพนักศึกษา สู่ความเป็นบัณฑิตที่สมบูรณ์
       </p>
@@ -109,3 +113,13 @@
     </footer>
   </div>
 </template>
+  </div>
+</template>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Kanit', sans-serif;
+}
+</style>

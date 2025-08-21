@@ -10,4 +10,11 @@ export default {
     extend: {},
   },
   plugins: [],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Kanit', 'sans-serif'], // ใช้แทน font sans ของ tailwind
+      },
+    },
+  },
 }
