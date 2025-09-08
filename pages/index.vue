@@ -1,103 +1,252 @@
 <script setup>
 </script>
+
 <template>
-  <div>
-    <template>
   <div class="min-h-screen flex flex-col bg-gradient-to-br from-yellow-50 via-white to-yellow-100">
     <!-- Header -->
-    <header class="bg-white/80 backdrop-blur-md text-yellow-700 shadow-lg border-b border-yellow-200 sticky top-0 z-20">
-  <div class="container mx-auto flex justify-between items-center py-4 px-6">
-    <h1 class="text-3xl font-extrabold text-yellow-700 tracking-tight flex items-center gap-2">
-      <span class="inline-block w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-white font-bold">S</span>
-      SKRU
-    </h1>
-    <nav class="space-x-6 hidden md:flex items-center">
-      <NuxtLink to="/" class="hover:text-yellow-500 text-yellow-700 transition-colors font-medium">
-          Home
-        </NuxtLink>
-      <div class="relative group">
-        <NuxtLink to="/about" class="hover:text-yellow-500 text-yellow-700 transition-colors font-medium">
-          เกี่ยวกับ
-        </NuxtLink>
-        <!-- เมนูย่อย -->
-        <div class="absolute left-0 mt-2 w-48 bg-white border border-yellow-200 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200">
-          <NuxtLink to="/about/mission" class="block px-4 py-2 text-yellow-700 hover:bg-yellow-50">สวัสดิการนักศึกษา</NuxtLink>
-          <NuxtLink to="/about/philosophy" class="block px-4 py-2 text-yellow-700 hover:bg-yellow-50">กิจกรรมนักศึกษา</NuxtLink>
-          <NuxtLink to="/about/policy" class="block px-4 py-2 text-yellow-700 hover:bg-yellow-50">สวัสดิการนักศึกษา</NuxtLink>
-          <NuxtLink to="/about/staff" class="block px-4 py-2 text-yellow-700 hover:bg-yellow-50">กิจกรรมนักศึกษา</NuxtLink>
-          <NuxtLink to="/about/structure" class="block px-4 py-2 text-yellow-700 hover:bg-yellow-50">สวัสดิการนักศึกษา</NuxtLink>
-          <NuxtLink to="/about/vision" class="block px-4 py-2 text-yellow-700 hover:bg-yellow-50">กิจกรรมนักศึกษา</NuxtLink>
-        </div>
-      </div>
-      <div class="relative group">
-        <NuxtLink to="/departments" class="hover:text-yellow-500 text-yellow-700 transition-colors font-medium">
-          ฝ่ายงาน
-        </NuxtLink>
-        <!-- เมนูย่อย -->
-        <div class="absolute left-0 mt-2 w-48 bg-white border border-yellow-200 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200">
-          <NuxtLink to="/departments/activities" class="block px-4 py-2 text-yellow-700 hover:bg-yellow-50">ฝ่ายกิจกรรมนักศึกษา กีฬาและนันทนาการ</NuxtLink>
-          <NuxtLink to="/departments/discipline" class="block px-4 py-2 text-yellow-700 hover:bg-yellow-50">ฝ่ายวินัยและพัฒนานักศึกษา</NuxtLink>
-          <NuxtLink to="/departments/general" class="block px-4 py-2 text-yellow-700 hover:bg-yellow-50">ฝ่ายบริหารงานทั่วไป</NuxtLink>
-          <NuxtLink to="/departments/scholarship" class="block px-4 py-2 text-yellow-700 hover:bg-yellow-50">ฝ่ายทุนการศึกษาและแนะแนว</NuxtLink>
-          <NuxtLink to="/departments/welfare" class="block px-4 py-2 text-yellow-700 hover:bg-yellow-50">ฝ่ายบริการ สวัสดิการ และให้คำปรึกษา</NuxtLink>
-        </div>
-      </div>
-      <div class="relative group">
-        <NuxtLink to="/departments" class="hover:text-yellow-500 text-yellow-700 transition-colors font-medium">
-          ข่าวสาร
-        </NuxtLink>
-        <!-- เมนูย่อย -->
-        <div class="absolute left-0 mt-2 w-48 bg-white border border-yellow-200 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200">
-          <NuxtLink to="/news/category/education" class="block px-4 py-2 text-yellow-700 hover:bg-yellow-50">หมวดทั่วไป1</NuxtLink>
-          <NuxtLink to="/news/category/etc" class="block px-4 py-2 text-yellow-700 hover:bg-yellow-50">หมวดทั่วไป2</NuxtLink>
-          <NuxtLink to="/news/category/general" class="block px-4 py-2 text-yellow-700 hover:bg-yellow-50">หมวดทั่วไป3</NuxtLink>
-          <NuxtLink to="/news/category/sports" class="block px-4 py-2 text-yellow-700 hover:bg-yellow-50">หมวดทั่วไป4</NuxtLink>
-          <NuxtLink to="/news/[id]" class="block px-4 py-2 text-yellow-700 hover:bg-yellow-50">หมวดข่าวจากเพจ</NuxtLink>
-          <NuxtLink to="/news/event-calendar" class="block px-4 py-2 text-yellow-700 hover:bg-yellow-50">ปฏิทินกิจกรรม</NuxtLink>
-        </div>
-      </div>
-      <div class="relative group">
-        <NuxtLink to="/departments" class="hover:text-yellow-500 text-yellow-700 transition-colors font-medium">
-          ระบบ
-        </NuxtLink>
-        <!-- เมนูย่อย -->
-        <div class="absolute left-0 mt-2 w-48 bg-white border border-yellow-200 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200">
-          <NuxtLink to="/systems/activity-check" class="block px-4 py-2 text-yellow-700 hover:bg-yellow-50">เช็คผลกิจกรรมชมรม</NuxtLink>
-          <NuxtLink to="/systems/booking" class="block px-4 py-2 text-yellow-700 hover:bg-yellow-50">จองสนามกีฬา/ห้องประชุม</NuxtLink>
-          <NuxtLink to="/systems/forms" class="block px-4 py-2 text-yellow-700 hover:bg-yellow-50">แบบฟอร์มดาวน์โหลด</NuxtLink>
-        </div>
-      </div>
-      <div class="relative group">
-        <NuxtLink to="/departments" class="hover:text-yellow-500 text-yellow-700 transition-colors font-medium">
-          ติดต่อ  
-        </NuxtLink>
-        <!-- เมนูย่อย -->
-        <div class="absolute left-0 mt-2 w-48 bg-white border border-yellow-200 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200">
-          <NuxtLink to="/contact/feedback" class="block px-4 py-2 text-yellow-700 hover:bg-yellow-50">ข้อเสนอแนะ</NuxtLink>
-          <NuxtLink to="/contact/map" class="block px-4 py-2 text-yellow-700 hover:bg-yellow-50">แผ่นที่</NuxtLink>
-        </div>
-      </div>
-    </nav>
-  </div>
-</header>
+    <header
+      class="bg-white/80 backdrop-blur-md text-yellow-700 shadow-lg border-b border-yellow-200 sticky top-0 z-20"
+    >
+      <div class="container mx-auto flex justify-between items-center py-6 px-8">
+        <!-- Logo -->
+        <h1
+          class="text-4xl font-extrabold text-yellow-700 tracking-tight flex items-center gap-3"
+        >
+          <span
+            class="inline-block w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center text-white font-bold"
+          >
+            S
+          </span>
+          SKRU
+        </h1>
 
+        <!-- Navigation -->
+        <nav class="space-x-8 hidden md:flex items-center text-lg font-semibold">
+          <NuxtLink
+            to="/"
+            class="hover:text-yellow-500 text-yellow-700 transition-colors"
+          >
+            Home
+          </NuxtLink>
+
+          <div class="relative group">
+            <NuxtLink
+              to="/about"
+              class="hover:text-yellow-500 text-yellow-700 transition-colors"
+            >
+              เกี่ยวกับ
+            </NuxtLink>
+            <!-- เมนูย่อย -->
+            <div
+              class="absolute left-0 mt-3 w-56 bg-white border border-yellow-200 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200"
+            >
+              <NuxtLink
+                to="/about/mission" 
+                class="block px-5 py-3 text-yellow-700 hover:bg-yellow-50"
+                >พันธกิจ</NuxtLink
+              >
+              <NuxtLink
+                to="/about/philosophy"
+                class="block px-5 py-3 text-yellow-700 hover:bg-yellow-50"
+                >ปรัชญา</NuxtLink
+              >
+              <NuxtLink
+                to="/about/policy"
+                class="block px-5 py-3 text-yellow-700 hover:bg-yellow-50"
+                >นโยบาย</NuxtLink
+              >
+              <NuxtLink
+                to="/about/staff"
+                class="block px-5 py-3 text-yellow-700 hover:bg-yellow-50"
+                >บุคลากร</NuxtLink
+              >
+              <NuxtLink
+                to="/about/structure"
+                class="block px-5 py-3 text-yellow-700 hover:bg-yellow-50"
+                >โครงสร้างการบริหาร</NuxtLink
+              >
+              <NuxtLink
+                to="/about/vision"
+                class="block px-5 py-3 text-yellow-700 hover:bg-yellow-50"
+                >วิสัยทัศน์</NuxtLink
+              >
+            </div>
+          </div>
+
+          <div class="relative group">
+            <NuxtLink
+              to="/departments"
+              class="hover:text-yellow-500 text-yellow-700 transition-colors"
+            >
+              ฝ่ายงาน
+            </NuxtLink>
+            <!-- เมนูย่อย -->
+            <div
+              class="absolute left-0 mt-3 w-56 bg-white border border-yellow-200 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200"
+            >
+              <NuxtLink
+                to="/departments/activities"
+                class="block px-5 py-3 text-yellow-700 hover:bg-yellow-50"
+                >ฝ่ายกิจกรรมนักศึกษา กีฬาและนันทนาการ</NuxtLink
+              >
+              <NuxtLink
+                to="/departments/discipline"
+                class="block px-5 py-3 text-yellow-700 hover:bg-yellow-50"
+                >ฝ่ายวินัยและพัฒนานักศึกษา</NuxtLink
+              >
+              <NuxtLink
+                to="/departments/general"
+                class="block px-5 py-3 text-yellow-700 hover:bg-yellow-50"
+                >ฝ่ายบริหารงานทั่วไป</NuxtLink
+              >
+              <NuxtLink
+                to="/departments/scholarship"
+                class="block px-5 py-3 text-yellow-700 hover:bg-yellow-50"
+                >ฝ่ายทุนการศึกษาและแนะแนว</NuxtLink
+              >
+              <NuxtLink
+                to="/departments/welfare"
+                class="block px-5 py-3 text-yellow-700 hover:bg-yellow-50"
+                >ฝ่ายบริการ สวัสดิการ และให้คำปรึกษา</NuxtLink
+              >
+            </div>
+          </div>
+
+          <div class="relative group">
+            <NuxtLink
+              to="/news"
+              class="hover:text-yellow-500 text-yellow-700 transition-colors"
+            >
+              ข่าวสาร
+            </NuxtLink>
+            <!-- เมนูย่อย -->
+            <div
+              class="absolute left-0 mt-3 w-56 bg-white border border-yellow-200 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200"
+            >
+              <NuxtLink
+                to="/news/category/education"
+                class="block px-5 py-3 text-yellow-700 hover:bg-yellow-50"
+                >หมวดทั่วไป1</NuxtLink
+              >
+              <NuxtLink
+                to="/news/category/etc"
+                class="block px-5 py-3 text-yellow-700 hover:bg-yellow-50"
+                >หมวดทั่วไป2</NuxtLink
+              >
+              <NuxtLink
+                to="/news/category/general"
+                class="block px-5 py-3 text-yellow-700 hover:bg-yellow-50"
+                >หมวดทั่วไป3</NuxtLink
+              >
+              <NuxtLink
+                to="/news/category/sports"
+                class="block px-5 py-3 text-yellow-700 hover:bg-yellow-50"
+                >หมวดทั่วไป4</NuxtLink
+              >
+              <NuxtLink
+                to="/news/event-calendar"
+                class="block px-5 py-3 text-yellow-700 hover:bg-yellow-50"
+                >ปฏิทินกิจกรรม</NuxtLink
+              >
+              <NuxtLink
+                to="/news/[id]"
+                class="block px-5 py-3 text-yellow-700 hover:bg-yellow-50"
+                >ข่าวสาร</NuxtLink
+              >
+            </div>
+          </div>
+
+          <div class="relative group">
+            <NuxtLink
+              to="/systems"
+              class="hover:text-yellow-500 text-yellow-700 transition-colors"
+            >
+              ระบบ
+            </NuxtLink>
+            <!-- เมนูย่อย -->
+            <div
+              class="absolute left-0 mt-3 w-56 bg-white border border-yellow-200 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200"
+            >
+              <NuxtLink
+                to="/systems/activity-check"
+                class="block px-5 py-3 text-yellow-700 hover:bg-yellow-50"
+                >เช็คผลกิจกรรมชมรม</NuxtLink
+              >
+              <NuxtLink
+                to="/systems/booking"
+                class="block px-5 py-3 text-yellow-700 hover:bg-yellow-50"
+                >จองสนามกีฬา/ห้องประชุม</NuxtLink
+              >
+              <NuxtLink
+                to="/systems/forms"
+                class="block px-5 py-3 text-yellow-700 hover:bg-yellow-50"
+                >แบบฟอร์มดาวน์โหลด</NuxtLink
+              >
+            </div>
+          </div>
+
+          <div class="relative group">
+            <NuxtLink
+              to="/contact"
+              class="hover:text-yellow-500 text-yellow-700 transition-colors"
+            >
+              ติดต่อ
+            </NuxtLink>
+            <!-- เมนูย่อย -->
+            <div
+              class="absolute left-0 mt-3 w-56 bg-white border border-yellow-200 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200"
+            >
+              <NuxtLink
+                to="/contact/feedback"
+                class="block px-5 py-3 text-yellow-700 hover:bg-yellow-50"
+                >ข้อเสนอแนะ</NuxtLink
+              >
+              <NuxtLink
+                to="/contact/map"
+                class="block px-5 py-3 text-yellow-700 hover:bg-yellow-50"
+                >แผนที่</NuxtLink
+              >
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-yellow-400/80 via-yellow-200/80 to-yellow-100/80 text-yellow-900 py-20 text-center relative overflow-hidden">
-      <div class="absolute inset-0 pointer-events-none">
-        <svg class="w-full h-full" viewBox="0 0 1440 320" fill="none">
-          <path fill="#FDE68A" fill-opacity="0.3" d="M0,160L80,149.3C160,139,320,117,480,128C640,139,800,181,960,181.3C1120,181,1280,139,1360,117.3L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
-        </svg>
-      </div>
-      <h2 class="text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-lg font-sans">งานพัฒนานักศึกษา มหาวิทยาลัยราชภัฏศรีสะเกษ</h2>
-      <p class="text-xl md:text-2xl mb-8 font-medium">พัฒนาศักยภาพนักศึกษา สู่ความเป็นบัณฑิตที่สมบูรณ์</p>
-      <NuxtLink
-        to="/systems/activity-check"
-        class="bg-yellow-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-yellow-600 transition shadow-lg text-lg"
+    <section
+      class="relative min-h-screen text-yellow-900 text-center overflow-hidden"
+    >
+      <!-- วิดีโอพื้นหลัง -->
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover"
       >
-        เช็คผลกิจกรรม
-      </NuxtLink>
+        <source src="/videos/bg-video.mp4" type="video/mp4" />
+        เบราว์เซอร์ของคุณไม่รองรับการเล่นวิดีโอ
+      </video>
+
+      <!-- เนื้อหา -->
+      <div class="relative z-10 container mx-auto px-6 pt-32">
+        <h2
+          class="text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-lg font-sans"
+        >
+          งานพัฒนานักศึกษา มหาวิทยาลัยราชภัฏศรีสะเกษ
+        </h2>
+        <p class="text-xl md:text-2xl mb-8 font-medium">
+          พัฒนาศักยภาพนักศึกษา สู่ความเป็นบัณฑิตที่สมบูรณ์
+        </p>
+        <NuxtLink
+          to="/systems/activity-check"
+          class="bg-yellow-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-yellow-600 transition shadow-lg text-lg"
+        >
+          เช็คผลกิจกรรม
+        </NuxtLink>
+      </div>
     </section>
+
 
     <!-- Quick Links -->
     <section class="container mx-auto py-14 px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -158,19 +307,80 @@
           </div>
         </div>
       </div>
-    </section>
+      <section class="py-20 bg-white/70 backdrop-blur-sm text-center">
+  <div class="container mx-auto">
+    <h2 class="text-2xl font-bold text-yellow-700 mb-6">ปฏิทินกิจกรรม</h2>
+    <div class="flex justify-center">
+     <iframe src="https://calendar.google.com/calendar/embed?src=markloveaw001%40gmail.com&ctz=Asia%2FBangkok" 
+     style="border: 0" width="800" height="600" 
+     frameborder="0" scrolling="no">
+    </iframe>
+    </div>
+  </div>
+      </section>
 
-    <!-- Footer -->
-    <footer class="bg-white/80 backdrop-blur-md text-yellow-700 py-10 mt-14 border-t border-yellow-200">
-      <div class="container mx-auto text-center space-y-2">
-        <p class="font-medium">© 2025 สำนักงานพัฒนานักศึกษา มหาวิทยาลัยราชภัฏศรีสะเกษ</p>
-        <p>ติดต่อ: <a href="mailto:sdd.sskru@gmail.com" class="underline hover:text-yellow-500">sdd.sskru@gmail.com</a> | โทร <a href="tel:0827514070" class="underline hover:text-yellow-500">082-751-4070</a></p>
+<!-- Footer -->
+<footer class="bg-yellow-100 text-yellow-900 pt-14 pb-6 mt-14">
+  <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+    <!-- Logo + Address -->
+    <div>
+      <div class="flex items-center gap-3 mb-4">
+        <img src="/images/logo.gif" alt="SSKRU Logo" class="h-12" />
+        <h2 class="text-2xl font-bold text-yellow-600">SSKRU</h2>
       </div>
-    </footer>
+      <p class="mb-3 flex items-center gap-2">
+        📞 (+66) – 045 – 643 – 600 – 5
+      </p>
+      <p class="mb-3 flex items-center gap-2">
+        📍 มรภ.ศรีสะเกษ 319 ถนนไทยพันทา ต.โพธิ์ อ.เมือง จ.ศรีสะเกษ 33000
+      </p>
+      <p class="mb-3 flex items-center gap-2">
+        ✉️ webmaster@sskru.ac.th
+      </p>
+    </div>
+
+    <!-- Social & Extra Info -->
+    <div class="space-y-3">
+      <div class="flex gap-5 text-xl">
+        <a href="#" class="hover:text-yellow-500 text-yellow-700">🌐</a>
+        <a href="#" class="hover:text-yellow-500 text-yellow-700">🐦</a>
+        <a href="#" class="hover:text-yellow-500 text-yellow-700">📸</a>
+        <a href="#" class="hover:text-yellow-500 text-yellow-700">📌</a>
+      </div>
+      <p class="flex items-center gap-2">📞 (+66) – 045 – 617 – 984</p>
+      <p class="flex items-center gap-2">© 2025 All Rights Reserved.</p>
+      <p class="flex items-center gap-2">👨‍💻 Designed by ARIT IT Team</p>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="flex flex-col items-start gap-4">
+      <NuxtLink
+        to="/contact"
+        class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-5 py-3 rounded-md shadow-md transition"
+      >
+        📞 ติดต่อ SSKRU
+      </NuxtLink>
+      <a
+        href="https://facebook.com"
+        target="_blank"
+        class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-5 py-3 rounded-md shadow-md transition"
+      >
+        👍 SSKRU PAGE
+      </a>
+    </div>
   </div>
-</template>
+
+  <!-- Views & Copyright -->
+  <div class="mt-10 border-t border-yellow-300 pt-6 text-center text-sm text-yellow-700">
+    <p class="mb-2">📊 Total 618340 views , Today 371 views</p>
+    <p>Copyright © 2025 SISAKET RAJABHAT UNIVERSITY All Rights Reserved.</p>
   </div>
+</footer>
+    </section>
+  </div>
+
 </template>
+
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
