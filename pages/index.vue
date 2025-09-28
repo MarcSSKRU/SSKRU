@@ -25,10 +25,9 @@
           <NuxtLink to="/" class="hover:text-yellow-500 text-yellow-700 transition-colors">
             Home
           </NuxtLink>
-           <NuxtLink to="/test/" class="hover:text-yellow-500 text-yellow-700 transition-colors">
+          <NuxtLink to="/test/" class="hover:text-yellow-500 text-yellow-700 transition-colors">
             test
           </NuxtLink>
-
 
           <!-- About -->
           <div class="relative group">

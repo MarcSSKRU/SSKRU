@@ -7,7 +7,7 @@
         <NuxtLink to="/" class="flex items-center gap-4 group">
           <div class="rounded-full bg-gradient-to-tr from-yellow-400 via-yellow-200 to-white border-4 border-yellow-500 shadow-xl p-1 transition-transform duration-300 group-hover:scale-110">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Logo_Rajabhat_Sisaket_University.png"
+              src="/images/logo.gif"
               alt="SSKRU Logo"
               class="w-14 h-14 object-contain drop-shadow-lg"
               @error="onLogoError"
@@ -21,13 +21,89 @@
           </div>
         </NuxtLink>
         <!-- Navigation -->
-        <nav class="hidden md:flex gap-6 items-center">
-          <NuxtLink to="/" class="nav-link px-4 py-2 rounded-full font-semibold text-yellow-800 hover:bg-yellow-100 hover:text-yellow-900 transition shadow-sm hover:shadow-md">{{ isEnglish ? 'Home' : 'หน้าแรก' }}</NuxtLink>
-          <a href="#about" class="nav-link px-4 py-2 rounded-full font-semibold text-yellow-800 hover:bg-yellow-100 hover:text-yellow-900 transition shadow-sm hover:shadow-md">{{ isEnglish ? 'About Clubs' : 'เกี่ยวกับชมรม' }}</a>
-          <a href="#clubs" class="nav-link px-4 py-2 rounded-full font-semibold text-yellow-800 hover:bg-yellow-100 hover:text-yellow-900 transition shadow-sm hover:shadow-md">{{ isEnglish ? 'Clubs List' : 'รายชื่อชมรม' }}</a>
-          <a href="#events" class="nav-link px-4 py-2 rounded-full font-semibold text-yellow-800 hover:bg-yellow-100 hover:text-yellow-900 transition shadow-sm hover:shadow-md">{{ isEnglish ? 'Events' : 'กิจกรรม' }}</a>
-          <a href="#contact" class="nav-link px-4 py-2 rounded-full font-semibold text-yellow-800 hover:bg-yellow-100 hover:text-yellow-900 transition shadow-sm hover:shadow-md">{{ isEnglish ? 'Contact' : 'ติดต่อ' }}</a>
-        </nav>
+        <nav class="hidden md:flex items-center text-sm lg:text-base font-medium space-x-5 lg:space-x-7">
+  <NuxtLink to="/" class="hover:text-yellow-500 text-yellow-700 transition-colors">
+    Home
+  </NuxtLink>
+
+  <!-- About -->
+  <div class="relative group">
+    <NuxtLink to="/about" class="hover:text-yellow-500 text-yellow-700 transition-colors">
+      เกี่ยวกับ
+    </NuxtLink>
+    <div
+      class="absolute left-0 mt-3 w-56 bg-white border border-yellow-200 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200"
+    >
+      <NuxtLink to="/about/mission" class="block px-5 py-2.5 text-sm text-yellow-700 hover:bg-yellow-50">พันธกิจ</NuxtLink>
+      <NuxtLink to="/about/philosophy" class="block px-5 py-2.5 text-sm text-yellow-700 hover:bg-yellow-50">ปรัชญา</NuxtLink>
+      <NuxtLink to="/about/policy" class="block px-5 py-2.5 text-sm text-yellow-700 hover:bg-yellow-50">นโยบาย</NuxtLink>
+      <NuxtLink to="/about/staff" class="block px-5 py-2.5 text-sm text-yellow-700 hover:bg-yellow-50">บุคลากร</NuxtLink>
+      <NuxtLink to="/about/structure" class="block px-5 py-2.5 text-sm text-yellow-700 hover:bg-yellow-50">โครงสร้างการบริหาร</NuxtLink>
+      <NuxtLink to="/about/vision" class="block px-5 py-2.5 text-sm text-yellow-700 hover:bg-yellow-50">วิสัยทัศน์</NuxtLink>
+    </div>
+  </div>
+
+  <!-- Departments -->
+  <div class="relative group">
+    <NuxtLink to="/departments" class="hover:text-yellow-500 text-yellow-700 transition-colors">
+      ฝ่ายงาน
+    </NuxtLink>
+    <div
+      class="absolute left-0 mt-3 w-64 bg-white border border-yellow-200 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200"
+    >
+      <NuxtLink to="/departments/activities" class="block px-5 py-2.5 text-sm text-yellow-700 hover:bg-yellow-50">ฝ่ายกิจกรรมนักศึกษา กีฬาและนันทนาการ</NuxtLink>
+      <NuxtLink to="/departments/discipline" class="block px-5 py-2.5 text-sm text-yellow-700 hover:bg-yellow-50">ฝ่ายวินัยและพัฒนานักศึกษา</NuxtLink>
+      <NuxtLink to="/departments/general" class="block px-5 py-2.5 text-sm text-yellow-700 hover:bg-yellow-50">ฝ่ายบริหารงานทั่วไป</NuxtLink>
+      <NuxtLink to="/departments/scholarship" class="block px-5 py-2.5 text-sm text-yellow-700 hover:bg-yellow-50">ฝ่ายทุนการศึกษาและแนะแนว</NuxtLink>
+      <NuxtLink to="/departments/welfare" class="block px-5 py-2.5 text-sm text-yellow-700 hover:bg-yellow-50">ฝ่ายบริการ สวัสดิการ และให้คำปรึกษา</NuxtLink>
+    </div>
+  </div>
+
+  <!-- News -->
+  <div class="relative group">
+    <NuxtLink to="/news" class="hover:text-yellow-500 text-yellow-700 transition-colors">
+      ข่าวสาร
+    </NuxtLink>
+    <div
+      class="absolute left-0 mt-3 w-56 bg-white border border-yellow-200 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200"
+    >
+      <NuxtLink to="/news/category/education" class="block px-5 py-2.5 text-sm text-yellow-700 hover:bg-yellow-50">หมวดทั่วไป1</NuxtLink>
+      <NuxtLink to="/news/category/etc" class="block px-5 py-2.5 text-sm text-yellow-700 hover:bg-yellow-50">หมวดทั่วไป2</NuxtLink>
+      <NuxtLink to="/news/category/general" class="block px-5 py-2.5 text-sm text-yellow-700 hover:bg-yellow-50">หมวดทั่วไป3</NuxtLink>
+      <NuxtLink to="/news/category/sports" class="block px-5 py-2.5 text-sm text-yellow-700 hover:bg-yellow-50">หมวดทั่วไป4</NuxtLink>
+      <NuxtLink to="/news/event-calendar" class="block px-5 py-2.5 text-sm text-yellow-700 hover:bg-yellow-50">ปฏิทินกิจกรรม</NuxtLink>
+      <NuxtLink to="/news/[id]" class="block px-5 py-2.5 text-sm text-yellow-700 hover:bg-yellow-50">ข่าวสาร</NuxtLink>
+    </div>
+  </div>
+
+  <!-- Systems -->
+  <div class="relative group">
+    <NuxtLink to="/systems" class="hover:text-yellow-500 text-yellow-700 transition-colors">
+      ระบบ
+    </NuxtLink>
+    <div
+      class="absolute left-0 mt-3 w-56 bg-white border border-yellow-200 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200"
+    >
+      <NuxtLink to="/systems/activity-check" class="block px-5 py-2.5 text-sm text-yellow-700 hover:bg-yellow-50">เช็คผลกิจกรรมชมรม</NuxtLink>
+      <NuxtLink to="/systems/booking" class="block px-5 py-2.5 text-sm text-yellow-700 hover:bg-yellow-50">จองสนามกีฬา/ห้องประชุม</NuxtLink>
+      <NuxtLink to="/systems/forms" class="block px-5 py-2.5 text-sm text-yellow-700 hover:bg-yellow-50">แบบฟอร์มดาวน์โหลด</NuxtLink>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="relative group">
+    <NuxtLink to="/contact" class="hover:text-yellow-500 text-yellow-700 transition-colors">
+      ติดต่อ
+    </NuxtLink>
+    <div
+      class="absolute left-0 mt-3 w-56 bg-white border border-yellow-200 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-200"
+    >
+      <NuxtLink to="/contact/feedback" class="block px-5 py-2.5 text-sm text-yellow-700 hover:bg-yellow-50">ข้อเสนอแนะ</NuxtLink>
+      <NuxtLink to="/contact/map" class="block px-5 py-2.5 text-sm text-yellow-700 hover:bg-yellow-50">แผนที่</NuxtLink>
+    </div>
+  </div>
+</nav>
+
         <!-- Actions -->
         <div class="flex items-center gap-2">
           <button
@@ -45,91 +121,29 @@
           </button>
         </div>
       </div>
-      <!-- Decorative bottom border -->
-      <div class="h-1 bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-500 opacity-80"></div>
+      
     </header>
 
-    <!-- Search Modal -->
-    <transition name="fade-hero-content">
-      <div
-        v-if="showSearch"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-black/40"
-        @click.self="showSearch = false"
-      >
-        <div class="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md relative">
-          <button class="absolute top-2 right-2 text-yellow-700 hover:text-yellow-900" @click="showSearch = false">
-            <span class="material-icons">close</span>
-          </button>
-          <h3 class="text-xl font-bold text-yellow-700 mb-4 flex items-center gap-2">
-            <span class="material-icons">search</span>
-            {{ isEnglish ? 'Search' : 'ค้นหา' }}
-          </h3>
-          <input
-            v-model="searchQuery"
-            type="text"
-            :placeholder="isEnglish ? 'Type to search...' : 'พิมพ์เพื่อค้นหา...'"
-            class="w-full border border-yellow-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-            @keyup.enter="doSearch"
-          />
-          <button
-            class="mt-4 w-full px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500 to-yellow-700 text-white font-semibold shadow hover:from-yellow-600 hover:to-yellow-800 transition hover:scale-105"
-            @click="doSearch"
-          >
-            {{ isEnglish ? 'Search' : 'ค้นหา' }}
-          </button>
-          <div v-if="searchResult" class="mt-4 text-yellow-700">
-            {{ searchResult }}
-          </div>
-        </div>
-      </div>
-    </transition>
+<!-- Hero Section -->
+    <section class="relative min-h-screen text-yellow-900 text-center overflow-hidden">
+      <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+        <source src="/videos/bg-video.mp4" type="video/mp4" />
+        เบราว์เซอร์ของคุณไม่รองรับการเล่นวิดีโอ
+      </video>
 
-    <!-- Hero -->
-    <section class="h-[90vh] flex items-center hero-bg relative overflow-hidden">
-      <transition-group name="fade-hero" tag="div" class="absolute inset-0 w-full h-full">
-        <img
-          v-for="(img, idx) in heroImages"
-          v-show="heroIndex === idx"
-          :key="img"
-          :src="img"
-          class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
-          :class="{'opacity-100': heroIndex === idx, 'opacity-0': heroIndex !== idx}"
-          alt="hero background"
-        />
-      </transition-group>
-      <div class="absolute inset-0 bg-gradient-to-br from-yellow-100/70 via-white/60 to-yellow-200/70"></div>
-      <div class="container mx-auto px-10 relative z-10">
-        <transition name="fade-hero-content" mode="out-in">
-          <div
-            :key="heroIndex"
-            class="max-w-3xl glass p-10 rounded-3xl shadow-2xl border border-yellow-100"
-          >
-            <h2 class="text-4xl md:text-5xl font-extrabold text-yellow-700 drop-shadow flex items-center gap-3 animate-fadein">
-              <span class="inline-block animate-bounce">🌟</span>
-              <span class="bg-gradient-to-r from-yellow-700 via-yellow-400 to-yellow-700 bg-clip-text text-transparent animate-gradient">
-                {{ isEnglish ? 'Welcome to Clubs of Sisaket Rajabhat University' : 'ยินดีต้อนรับสู่ชมรม มหาวิทยาลัยราชภัฏศรีสะเกษ' }}
-              </span>
-            </h2>
-            <p class="mt-4 text-lg text-yellow-800 font-medium animate-fadein delay-200">
-              {{ isEnglish
-                ? 'Empowering creativity, developing student potential — Great activities for everyone'
-                : 'รวมพลังสร้างสรรค์ พัฒนาศักยภาพนักศึกษา — ' }}
-              <span class="text-yellow-700 font-bold animate-pulse">
-                {{ isEnglish ? 'Great activities for all' : 'กิจกรรมดี ๆ เพื่อทุกคน' }}
-              </span>
-            </p>
-            <div class="mt-8 flex gap-4">
-              <a
-                href="#clubs"
-                class="px-6 py-3 rounded-full bg-yellow-600 text-white font-semibold shadow hover:bg-yellow-700 transition flex items-center gap-2 hover:scale-105"
-                ><span class="material-icons text-lg">groups</span> {{ isEnglish ? 'View Clubs' : 'ดูรายชื่อชมรม' }}</a
-              >
-              <a href="#events" class="px-6 py-3 rounded-full border border-yellow-600 text-yellow-700 font-semibold hover:bg-yellow-50 transition flex items-center gap-2 hover:scale-105"
-                ><span class="material-icons text-lg">event</span> {{ isEnglish ? 'Latest Events' : 'กิจกรรมล่าสุด' }}</a
-              >
-            </div>
-          </div>
-        </transition>
+      <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 drop-shadow-lg">
+          งานพัฒนานักศึกษา มหาวิทยาลัยราชภัฏศรีสะเกษ
+        </h2>
+        <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 font-medium">
+          พัฒนาศักยภาพนักศึกษา สู่ความเป็นบัณฑิตที่สมบูรณ์
+        </p>
+        <NuxtLink
+          to="/systems/activity-check"
+          class="bg-yellow-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-yellow-600 transition shadow-lg text-base sm:text-lg"
+        >
+          เช็คผลกิจกรรม
+        </NuxtLink>
       </div>
     </section>
 
@@ -182,6 +196,55 @@
       </div>
     </section>
 
+        <!-- Hero -->
+    <section class="h-[100vh] flex items-center hero-bg relative overflow-hidden">
+      <transition-group name="fade-hero" tag="div" class="absolute inset-0 w-full h-full">
+        <img
+          v-for="(img, idx) in heroImages"
+          v-show="heroIndex === idx"
+          :key="img"
+          :src="img"
+          class="absolute inset -0 w-full h-full object-cover transition-opacity duration-1000"
+          :class="{'opacity-100': heroIndex === idx, 'opacity-0': heroIndex !== idx}"
+          alt="hero background"
+        />
+      </transition-group>
+      <div class="absolute inset 1  bg-gradient-to-br from-yellow-100/70 via-white/60 to-yellow-200/70"></div>
+      <div class="container mx-auto px-10 relative z-10">
+        <transition name="fade-hero-content" mode="out-in">
+          <div
+            :key="heroIndex"
+            class="max-w-4xl glass p-20 rounded-3xl shadow-2xl border border-yellow-100"
+          >
+            <h2 class="text-4xl md:text-5xl font-extrabold text-yellow-700 drop-shadow flex items-center gap-3 animate-fadein">
+              <span class="inline-block animate-bounce">🌟</span>
+              <span class="bg-gradient-to-r from-yellow-700 via-yellow-400 to-yellow-700 bg-clip-text text-transparent animate-gradient">
+                {{ isEnglish ? 'Welcome to Clubs of Sisaket Rajabhat University' : 'ยินดีต้อนรับสู่ชมรม มหาวิทยาลัยราชภัฏศรีสะเกษ' }}
+              </span>
+            </h2>
+            <p class="mt-4 text-lg text-yellow-800 font-medium animate-fadein delay-200">
+              {{ isEnglish
+                ? 'Empowering creativity, developing student potential — Great activities for everyone'
+                : 'รวมพลังสร้างสรรค์ พัฒนาศักยภาพนักศึกษา — ' }}
+              <span class="text-yellow-700 font-bold animate-pulse">
+                {{ isEnglish ? 'Great activities for all' : 'กิจกรรมดี ๆ เพื่อทุกคน' }}
+              </span>
+            </p>
+            <div class="mt-8 flex gap-4">
+              <a
+                href="#clubs"
+                class="px-6 py-3 rounded-full bg-yellow-600 text-white font-semibold shadow hover:bg-yellow-700 transition flex items-center gap-2 hover:scale-105"
+                ><span class="material-icons text-lg">groups</span> {{ isEnglish ? 'View Clubs' : 'ดูรายชื่อชมรม' }}</a
+              >
+              <a href="#events" class="px-6 py-3 rounded-full border border-yellow-600 text-yellow-700 font-semibold hover:bg-yellow-50 transition flex items-center gap-2 hover:scale-105"
+                ><span class="material-icons text-lg">event</span> {{ isEnglish ? 'Latest Events' : 'กิจกรรมล่าสุด' }}</a
+              >
+            </div>
+          </div>
+        </transition>
+      </div>
+    </section>
+    
     <!-- Clubs -->
     <section id="clubs" class="bg-gradient-to-r from-yellow-50 to-yellow-100 py-14">
       <div class="container mx-auto px-6">
@@ -231,6 +294,22 @@
           </div>
         </div>
       </div>
+
+      <section class="py-12 bg-white/70 backdrop-blur-sm text-center mt-12 rounded-xl">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl font-bold text-yellow-700 mb-6">ปฏิทินกิจกรรม</h2>
+    <div class="flex justify-center">
+      <iframe
+  src="https://calendar.google.com/calendar/embed?src=markloveaw001%40gmail.com&ctz=Asia%2FBangkok"
+  style="border:0"
+  class="w-full max-w-3xl h-[500px] md:h-[600px] rounded-lg shadow"
+  frameborder="0"
+  scrolling="no">
+</iframe>
+    </div>
+  </div>
+</section>
+
     </section>
 
     <!-- News -->
@@ -328,6 +407,8 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 
+
+//เอาไฟฃ์ล์วิดีโอไว้ใน public/images/hero1.jpg', *ตัวอย่าง*
 const heroImages = [
   'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=60',
   'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1600&q=60',
@@ -371,6 +452,17 @@ function doSearch() {
     ? `No results found for "${searchQuery.value}".`
     : `ไม่พบผลลัพธ์สำหรับ "${searchQuery.value}"`
 }
+
+useHead({
+  link: [
+    {
+      rel: "icon",
+      type: "image/gif",
+      href: "/images/logo.gif", // ไฟล์อยู่ใน public/images/logo.gif
+    },
+  ],
+})
+
 </script>
 
 <style scoped>
